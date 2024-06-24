@@ -45,6 +45,10 @@ export class AppComponent{
   }
 
   dateBlur(){
+    let text = document.getElementById("textDate");
+    if(text)
+      text!.style.color = "transparent";
+
     this.dateStr = this.makeDateString();
     this.saveDate();
 
@@ -52,7 +56,10 @@ export class AppComponent{
   }
 
   nameBlur(){
-    
+    let text = document.getElementById("textName");
+    if(text)
+      text!.style.color = "transparent";
+
     this.nameStr = this.name;
     this.saveName();
 
@@ -93,7 +100,6 @@ export class AppComponent{
         setTimeout(() => {
           let text = document.getElementById(_text);
 
-          text!.style.color = "transparent"
           text!.style.fontSize = `${fontSize}px`;
 
           if(text!.clientWidth <= container!.clientWidth)
