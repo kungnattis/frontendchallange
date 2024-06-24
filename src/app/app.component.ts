@@ -63,7 +63,8 @@ export class AppComponent{
     this.nameStr = this.name;
     this.saveName();
 
-    this.resizeText("textName", "container", this._showName, "purple", this.nameResizeInterval)
+    if(this.nameStr)
+      this.resizeText("textName", "container", this._showName, "purple", this.nameResizeInterval)
   }
 
   makeDateString(){
