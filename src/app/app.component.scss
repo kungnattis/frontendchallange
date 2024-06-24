@@ -1,0 +1,49 @@
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column; 
+ 
+
+  .text-container {
+    width: 100%;  
+
+  }
+
+  .input-container {
+    display: flex;
+  }
+
+  .resizing-text {
+    margin: 0 auto;
+    color: transparent;
+    width: fit-content;
+    white-space: nowrap;
+    height: 100px;
+  }
+
+  .textfields {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  @media screen and (orientation: landscape) {
+    .textfields{
+      flex-direction: row;
+    }
+    
+  }
+
+  @media screen and (orientation: portrait) {
+    .textfields{
+      flex-direction: column;
+    }
+    
+  }
+
+}
